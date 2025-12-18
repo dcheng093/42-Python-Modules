@@ -6,4 +6,4 @@ def ft_seed_inventory(seed: str, count: int, unit: str) -> None:
     elif unit == "area":
         print(seed.capitalize(), "seeds: covers", count, "square meters")
     else:
-        unit = "Unknown unit type"
+        print("Unknown unit type")

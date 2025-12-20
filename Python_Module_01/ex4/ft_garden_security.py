@@ -2,7 +2,7 @@
 
 class SecurePlant:
     def __init__(self, name, height, age):
-        self.__name = name
+        self.__name = name.capitalize()
         self.__height = height
         self.__age = age
         print(f"Plant created: {self.__name}")

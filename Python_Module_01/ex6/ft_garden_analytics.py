@@ -67,10 +67,10 @@ class GardenManager:
         @staticmethod
         def plant_types(plants):
             regular = flowering = prize = 0
-            for p in plants:
-                if isinstance(p, PrizeFlower):
+            for plant in plants:
+                if isinstance(plant, PrizeFlower):
                     prize += 1
-                elif isinstance(p, FloweringPlant):
+                elif isinstance(plant, FloweringPlant):
                     flowering += 1
                 else:
                     regular += 1

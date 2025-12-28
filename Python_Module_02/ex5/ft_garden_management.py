@@ -31,8 +31,8 @@ class Plant:
             )
         elif self.sun < 2 or self.sun > 12:
             raise HealthError(
-                f"Error checking {self.name}: Sunlight level {self.sun} is too "
-                f"{'low (min 2)' if self.sun < 2 else 'high (max 12)'}\n"
+                f"Error checking {self.name}: Sunlight level {self.sun} is too"
+                f"{' low (min 2)' if self.sun < 2 else ' high (max 12)'}\n"
             )
         else:
             print(f"{self.name}: healthy "

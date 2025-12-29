@@ -40,7 +40,7 @@ class Garden:
         self.plants = []
 
     def add_plant(self, plant, announce=True):
-        self.plants.append(plant)
+        self.plants = self.plants + [plant]
         if announce:
             print(f"Added {plant.name} to {self.owner}'s garden")
 

@@ -51,7 +51,7 @@ class GardenManager:
                                      "cannot be empty!")
             else:
                 print(f"Added {plant.name} successfully")
-                self.__plants.append(plant)
+                self.__plants = self.__plants + [plant]
         except Exception as e:
             print(e)
 

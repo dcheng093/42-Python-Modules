@@ -1,8 +1,10 @@
 #!/usr/bin/python3.10
 
+import sys
+
+
 def score_analytics():
     print("=== Player Score Analytics ===")
-    import sys
     scores = []
     if len(sys.argv) > 1:
         i = 1
@@ -21,7 +23,6 @@ def score_analytics():
             print(f"High score: {max(scores)}")
             print(f"Low score: {min(scores)}")
             print(f"Score range: {max(scores) - min(scores)}\n")
-
     else:
         print("No scores provided. Usage: python3 ft_score_analytics.py "
               "<score1> <score2> ...")

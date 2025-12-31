@@ -100,7 +100,8 @@ def display_analytics(player_dict):
             print(item, end="")
             if count < total:
                 print(", ", end="")
-        print()
+        print("")
+    print("")
 
 
 if __name__ == "__main__":

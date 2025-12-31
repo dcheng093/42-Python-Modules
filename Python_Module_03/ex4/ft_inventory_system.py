@@ -68,19 +68,15 @@ def display_analytics(player_dict):
     max_gold = 0
     most_items_name = ""
     max_items = 0
-
     for name, inv in player_dict.items():
         current_total = 0
         item_count = 0
-
         for details in inv.values():
             current_total += details.get("quantity") * details.get("value")
             item_count += details.get("quantity")
-
         if current_total > max_gold:
             max_gold = current_total
             mvp_name = name
-
         if item_count > max_items:
             max_items = item_count
             most_items_name = name

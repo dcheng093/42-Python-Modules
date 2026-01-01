@@ -69,19 +69,19 @@ def combined_anal(set_players, achievements, dict_players, list_players):
 
 if __name__ == "__main__":
     print("=== Game Analytics Dashboard ===\n")
-    list_players = [
+    list_players: list = [
         ("alice", 2300, True),
         ("bob", 1800, True),
         ("charlie", 2150, True),
         ("diana", 2050, False)
     ]
     list_comprehension(list_players)
-    dict_players = {
+    dict_players: dict = {
         "alice": 2300,
         "bob": 1800,
         "charlie": 2150
     }
-    achievements = {
+    achievements: dict[set] = {
         "alice": ["first_kill", "boss_slayer", "level_10", "speed_runner",
                   "collector"],
         "bob": ["first_kill", "level_10", "collector"],
@@ -89,19 +89,19 @@ if __name__ == "__main__":
                     "sharpshooter", "collector", "veteran"],
         "diana": ["idk", "bruh", "pmo", "ong"]
     }
-    achievements_set_players = {
+    achievements_set_players: dict[set] = {
         "alice": ["first kill"],
         "bob": ["level_10"],
         "charlie": ["boss_slayer"],
     }
     dict_comprehension(dict_players, achievements)
-    set_players = {
+    set_players: set = {
         "alice",
         "bob",
         "charlie",
         "diana"
     }
-    player_regions = {
+    player_regions: dict = {
         "alice": "north",
         "bob": "east",
         "charlie": "central",

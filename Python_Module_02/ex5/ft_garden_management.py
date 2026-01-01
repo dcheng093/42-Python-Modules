@@ -104,3 +104,7 @@ def test_garden_management():
         print("System recovered and continuing...")
     print("")
     print("Garden management system test complete!")
+
+
+if __name__ == "__main__":
+    test_garden_management

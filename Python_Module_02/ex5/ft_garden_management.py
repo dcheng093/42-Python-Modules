@@ -81,7 +81,7 @@ class GardenManager:
                 print(e)
 
 
-if __name__ == "__main__":
+def test_garden_management():
     print("=== Garden Management System ===")
     manager = GardenManager()
     print("\nAdding plants to garden...")

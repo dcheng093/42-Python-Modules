@@ -4,7 +4,7 @@ print("=== CYBER ARCHIVES - VAULT SECURITY SYSTEM ===\n")
 print("Initiating secure vault access...")
 data = "classified_data.txt"
 security = "security_protocols.txt"
-print("Vault connection establish with failsafe protocols\n")
+print("Vault connection established with failsafe protocols\n")
 print("SECURE EXTRACTION:")
 with open(data, 'r') as f:
     content = f.read()

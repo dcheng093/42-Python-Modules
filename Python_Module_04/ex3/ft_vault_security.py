@@ -5,15 +5,13 @@ print("Initiating secure vault access...")
 data = "classified_data.txt"
 security = "security_protocols.txt"
 print("Vault connection establish with failsafe protocols\n")
-with open(data, 'r'):
-    print("SECURE EXTRACTION:")
-    f = open(data, 'r')
+print("SECURE EXTRACTION:")
+with open(data, 'r') as f:
     content = f.read()
     print(content)
-with open(security, 'r'):
-    print("\nSECURE PRESERVATION:")
-    f = open(security, 'r')
+print("\nSECURE PRESERVATION:")
+with open(security, 'r') as f:
     content = f.read()
     print(content)
-    print("Vault automatically sealed upon completion\n")
+print("Vault automatically sealed upon completion\n")
 print("All vault operations completed with maximum security.")

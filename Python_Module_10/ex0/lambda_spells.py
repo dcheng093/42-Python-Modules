@@ -32,6 +32,21 @@ def main() -> None:
         {'name': 'Crystal Orb', 'power': 85, 'type': 'crystal'},
         {'name': 'Fire Staff', 'power': 92, 'type': 'fire'},
     ]
+    mages = [{'name': 'Phoenix',
+              'power': 100,
+              'element': 'fire'},
+             {'name': 'Jordan',
+              'power': 84,
+              'element': 'ice'},
+             {'name': 'Kai',
+              'power': 92,
+              'element': 'light'},
+             {'name': 'Kai',
+              'power': 82,
+              'element': 'fire'},
+             {'name': 'Rowan',
+              'power': 59,
+              'element': 'fire'}]
     sorted_artifacts = artifact_sorter(artifacts)
     for i in range(len(sorted_artifacts) - 1):
         first = sorted_artifacts[i]
@@ -42,6 +57,14 @@ def main() -> None:
     spells = ['fireball', 'heal', 'shield']
     transformed_spells = spell_transformer(spells)
     print(" ".join(transformed_spells))
+    print("\nTesting power filter...")
+    filtered = power_filter(mages, 70)
+    for mage in filtered:
+        print(f"{mage['name']} ({mage['power']} power) - {mage['element']}")
+    print("\nTesting mage stats...")
+    stats = mage_stats(mages)
+    for key, value in stats.items():
+        print(f"{key}: {value}")
 
 
 if __name__ == "__main__":

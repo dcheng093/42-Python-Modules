@@ -2,10 +2,10 @@ from typing import Callable
 
 
 def spell_combiner(spell1: Callable, spell2: Callable) -> Callable:
-    def combined(*args, **kwargs) -> tuple:
+    def combined(target: str, power: int) -> tuple[str, str]:
         return (
-            spell1(*args, **kwargs),
-            spell2(*args, **kwargs),
+            spell1(target, power),
+            spell2(target, power),
         )
     return combined
 
@@ -17,16 +17,16 @@ def power_amplifier(base_spell: Callable, multiplier: int) -> Callable:
 
 
 def conditional_caster(condition: Callable, spell: Callable) -> Callable:
-    def cast(*args, **kwargs):
-        if condition(*args, **kwargs):
-            return spell(*args, **kwargs)
+    def cast(target: str, power: int):
+        if condition(target, power):
+            return spell(target, power)
         return "Spell fizzled"
     return cast
 
 
 def spell_sequence(spells: list[Callable]) -> Callable:
-    def sequence(*args, **kwargs) -> list:
-        return [spell(*args, **kwargs) for spell in spells]
+    def sequence(target: str, power: int) -> list:
+        return [spell(target, power) for spell in spells]
     return sequence
 
 

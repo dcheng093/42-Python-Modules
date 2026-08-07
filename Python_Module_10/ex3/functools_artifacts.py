@@ -75,3 +75,14 @@ if __name__ == "__main__":
     print(cast("fireball"))
     print(cast([1, 2, 3]))
     print(cast({"weird": "thing"}))
+
+    # print("\n\n\nexamples using the actual data from the generator:")
+    # spell_powers = [18, 39, 33, 28, 42, 34]
+    # operations = ['add', 'multiply', 'max', 'min']
+    # fibonacci_tests = [8, 19, 20]
+    # print("\nTesting spell_reducer...")
+    # for operation in operations:
+    #     print(f"{operation}: {spell_reducer(spell_powers, operation)}")
+    # print("\nTesting memoized fibonacci...")
+    # for integer in fibonacci_tests:
+    #     print(f"Fib({integer}): {memoized_fibonacci(integer)}")

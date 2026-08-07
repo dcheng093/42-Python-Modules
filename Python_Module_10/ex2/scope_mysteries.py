@@ -68,3 +68,21 @@ if __name__ == "__main__":
     vault["store"]("secret", 42)
     print("Recall 'secret':", vault["recall"]("secret"))
     print("Recall 'unknown':", vault["recall"]("unknown"))
+
+    # print("\n\n\nexamples using the actual data from the generator:")
+    # initial_powers = [45, 73, 39]
+    # power_additions = [14, 15, 13, 11, 14]
+    # print("\nTesting spell accumulator...")
+    # for power in initial_powers:
+    #     acc = spell_accumulator(power)
+    #     print()
+    #     for addition in power_additions:
+    #         print(f"Base {power}, add {addition}:", acc(addition))
+    # print("\nTesting enchantment factory...\n")
+    # enchantment_types = ['Dark', 'Frozen', 'Radiant']
+    # items_to_enchant = ['Amulet', 'Armor', 'Shield', 'Cloak']
+    # for enchantment in enchantment_types:
+    #     factory = enchantment_factory(enchantment)
+    #     print()
+    #     for item in items_to_enchant:
+    #         print(factory(item))

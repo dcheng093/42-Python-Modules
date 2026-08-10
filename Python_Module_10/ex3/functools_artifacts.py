@@ -6,7 +6,7 @@ import operator
 def spell_reducer(spells: list[int], operation: str) -> int:
     if not spells:
         return 0
-
+    operation = operation.lower()
     ops = {
         "add": operator.add,
         "multiply": operator.mul,
